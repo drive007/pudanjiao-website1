@@ -68,7 +68,7 @@
              line-height: inherit; /* Allow content to wrap and flow */
         }
 
-        /* --- NEW Language Dropdown Styles --- */
+        /* --- Language Dropdown Styles --- */
         .lang-switcher-container {
             position: absolute;
             top: 15px;
@@ -450,6 +450,13 @@
                          <span class="lang-content lang-zh">Muva (轻奢女包)</span>
                          <span class="lang-content lang-en">Muva (Light Luxury Women's Bags)</span>
                      </div>
+                     <!-- == ADDED ZARA HERE == -->
+                     <div class="partner-item">
+                        <span class="lang-content lang-th">Zara (แบรนด์แฟชั่นระดับโลก)</span>
+                        <span class="lang-content lang-zh">Zara (全球时尚品牌)</span>
+                        <span class="lang-content lang-en">Zara (Global Fashion Brand)</span>
+                    </div>
+                    <!-- == END OF ADDED ZARA == -->
                 </div>
                  <p>
                     <span class="lang-content lang-th">ความสำเร็จของพันธมิตร คือเครื่องยืนยันคุณภาพและบริการที่เชื่อถือได้ของเรา</span>
@@ -480,11 +487,13 @@
                          <span class="lang-content lang-zh">地址</span>
                          <span class="lang-content lang-en">Address</span>
                     </h3>
+                     <!-- == UPDATED ADDRESS HERE == -->
                      <p>
-                         <span class="lang-content lang-th">เมืองกวางโจว, ประเทศจีน<br>(โปรดติดต่อสอบถามสำหรับรายละเอียดเพิ่มเติม)</span>
-                         <span class="lang-content lang-zh">广州市花都区狮岭镇狮岭村横坑经济社自编7号</span>
-                         <span class="lang-content lang-en">No. 7, Hengkeng Economic Society, Shiling Village, Shiling Town, Huadu District, Guangzhou City, China</span>
+                         <span class="lang-content lang-th">เลขที่ 2, ซอย 2, หมู่บ้านใหม่ฉีไฉ, เมืองซือหลิ่ง, เขตฮวาตู, นครกว่างโจว, ประเทศจีน</span>
+                         <span class="lang-content lang-zh">广州市花都区狮岭狮岭镇奇才新村2巷2号</span>
+                         <span class="lang-content lang-en">No. 2, Lane 2, Qicai New Village, Shiling Town, Huadu District, Guangzhou City, China</span>
                      </p>
+                     <!-- == END OF UPDATED ADDRESS == -->
                  </div>
                  <!-- Contact Item 2: Phone -->
                  <div class="contact-item">
@@ -592,6 +601,7 @@
 
             // --- Close Dropdown on Outside Click ---
             document.addEventListener('click', function(event) {
+                // Check if the click is outside the toggle button AND outside the dropdown content
                 if (!toggleBtn.contains(event.target) && !langDropdown.contains(event.target)) {
                     langDropdown.classList.remove('show-dropdown');
                     toggleBtn.classList.remove('open');
